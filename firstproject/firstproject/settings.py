@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myfirstapp.apps.MyfirstappConfig'
+    'myfirstapp.apps.MyfirstappConfig',
+    'crud.apps.CrudConfig'
 ]
 
 MIDDLEWARE = [
