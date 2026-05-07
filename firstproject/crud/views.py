@@ -44,3 +44,7 @@ def traitementupdate(request, id):
         return HttpResponseRedirect("/crud/")
     else:
         return render(request, "crud/update.html", {"form": lform, "id": id})
+
+def all(request):
+    livres = list(models.Livre.objects.all())
+    return render(request, "crud/all.html", {"livres": livres})
