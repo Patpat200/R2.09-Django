@@ -9,7 +9,15 @@
     <a href="/crud/ajout/">Ajouter un livre</a>
     <ul>
         {% for livre in livres %}
-            <li>{{livre}}</li>
+            <li>
+                <a href="/crud/update/{{livre.id}}/"><button>Modifier</button></a>
+
+                <a href="/crud/delete/{{livre.id}}/" onclick="return confirm('Supprimer ce livre ?')">
+                    <button style="color: red;">Supprimer</button>
+                </a>
+
+                {{livre}}
+            </li>
         {% endfor %}
     </ul>
 </body>

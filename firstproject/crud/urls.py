@@ -8,5 +8,6 @@ urlpatterns = [
     path('affiche/<int:id>/',views.read),
     path('update/<int:id>/',views.traitementupdate),
     path('', views.all),
+    path('delete/<int:id>/', views.delete),
 
 ]

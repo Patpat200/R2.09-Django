@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>ajout d'un Livre</title>
-</head>
-<body>
-    <p> vous avez ajouté le Livre suivant {{Livre}} {{Livre.id}} </p>
-</body>
-</html>
+<h1>Détails du livre</h1>
+<ul>
+    <li>Titre : {{ Livre.titre }}</li>
+    <li>Auteur : {{ Livre.auteur }}</li>
+    <li>Date de parution : {{ Livre.date_parution }}</li>
+    <li>Nombre de pages : {{ Livre.n_pages }}</li>
+</ul>
+
+<br>
+<a href="/crud/">
+    <button type="button">Retour à la liste des livres</button>
+</a>

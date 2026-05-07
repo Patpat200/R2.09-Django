@@ -1,5 +1,8 @@
-<form method="post" action="/crud/traitementupdate/{{id}}">
+<form method="post" action="/crud/update/{{id}}/">
     {% csrf_token %}
     {{ form.as_ul }}
-    <input type="submit" value="envoyer  les  données"\>
+    <input type="submit" value="Envoyer les données">
 </form>
+
+<br>
+<a href="/crud/"><button type="button">Annuler et retourner à la liste</button></a>
