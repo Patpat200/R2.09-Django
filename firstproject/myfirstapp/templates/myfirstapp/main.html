@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {% load static %}
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'myfirstapp/style.css' %}">
+
+   <title>{% block title %}Mon Site {% endblock %} </title>
+</head>
+<body>
+     <aside id="sidebar">
+         {% block sidebar %}
+         <ul>
+             <li><a href="/myfirstapp/formulaire">Formulaire</a></li>
+             <li><a href="/myfirstapp/index">Index</a></li>
+         </ul>
+         {% endblock %}
+     </aside>
+
+     <div id="content">
+         {% block content %}
+         <h1> bloc principal </h1>
+         {% endblock %}
+     </div>
+</body>
+</html>

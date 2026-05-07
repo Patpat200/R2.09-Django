@@ -14,3 +14,6 @@ def bonjour(request):
     prenom = request.GET["prenom"]
 
     return render(request, 'myfirstapp/bonjour.html', {"nom":nom, "prenom":prenom})
+
+def main(request):
+    return render(request, 'myfirstapp/main.html')
