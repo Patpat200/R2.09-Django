@@ -17,7 +17,7 @@ class Marque(models.Model): #déclare la classe Livre héritant de la classe Mod
         return chaine
 
 
-class Model(models.Model): #déclare la classe Livre héritant de la classe Model, classe
+class Modele(models.Model): #déclare la classe Livre héritant de la classe Model, classe
 
     nom = models.CharField(max_length=100) # défini un champs de type texte de 100
 
@@ -29,8 +29,10 @@ class Model(models.Model): #déclare la classe Livre héritant de la classe Mode
 
     prix = models.IntegerField(blank=False) # champs de type entier devant
 
+    marque = models.ForeignKey("Marque", on_delete=models.CASCADE, default=None)
+
     resume = models.TextField(null = True, blank = True) # champs de type text long
 
     def __str__(self):
-        chaine = f"{self.nom}, {self.energie}, {self.nombre_chevaux}ch, {self.type_moteur}, {self.prix}€"
+        chaine = f"{self.nom}, {self.energie}, {self.nombre_chevaux}ch, {self.type_moteur}, {self.prix}€, de {self.marque}"
         return chaine

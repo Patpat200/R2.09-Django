@@ -16,16 +16,17 @@ class MarqueForm(ModelForm):
         }
 
 
-class ModelForme(ModelForm):
+class ModeleForm(ModelForm):
     class Meta:
-        model = models.Model
-        fields = ('nom', 'energie', 'nombre_chevaux', 'type_moteur','prix','resume')
+        model = models.Modele
+        fields = ('nom', 'energie', 'nombre_chevaux', 'type_moteur','prix','marque','resume')
         labels = {
             'nom' : _('Nom'),
             'energie' : _('Energie') ,
             'nombre_chevaux' : _('Nombre de chevaux'),
             'type_moteur' : _('Type de moteur'),
             'prix': _('Prix'),
+            'marque': _('Marque'),
             'resume' : _('Résumé')
         }
 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Marque</title>
+</head>
+<body>
+    <h1>Liste des marques</h1>
+    <a href="/vroum/ajout/">Ajouter une marque</a>
+    <ul>
+        {% for marque in Marque %}
+            <li>
+                <a href="/vroum/update/{{marque.id}}/"><button>Modifier</button></a>
+
+                <a href="/vroum/delete/{{marque.id}}/" onclick="return confirm('Supprimer cette marque ?')">
+                    <button style="color: red;">Supprimer</button>
+                </a>
+
+                {{marque}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
