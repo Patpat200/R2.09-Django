@@ -5,12 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <form method="post" action="/vroum/traitement/">
+    <form method="post" action="/vroum/marque/traitement/">
         {% csrf_token %}
         {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste-->
         <input type="submit" value="envoyer les données"\>
     </form>
     <br>
-    <a href="/vroum/"><button type="button">Retour à la liste</button></a>
+    <a href="/vroum/marque/"><button type="button">Retour à la liste</button></a>
 </body>
 </html>

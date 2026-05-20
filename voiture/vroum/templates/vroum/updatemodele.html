@@ -1,8 +1,0 @@
-<form method="post" action="/vroum/updatemodele/{{id}}/">
-    {% csrf_token %}
-    {{ form.as_ul }}
-    <input type="submit" value="Envoyer les données">
-</form>
-
-<br>
-<a href="/vroum/2"><button type="button">Annuler et retourner à la liste</button></a>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>modele</title>
+</head>
+<body>
+    <h1>Liste des modele</h1>
+    <a href="/vroum/modele/ajoutmodele/">Ajouter un modele</a>
+    <ul>
+        {% for modele in Modele %}
+            <li>
+                <a href="/vroum/modele/updatemodele/{{modele.id}}/"><button>Modifier</button></a>
+
+                <a href="/vroum/modele/deletemodele/{{modele.id}}/" onclick="return confirm('Supprimer ce modele ?')">
+                    <button style="color: red;">Supprimer</button>
+                </a>
+
+                {{modele}}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+ <h1>Liste des marques</h1>
+    <a href="/vroum/marque/ajout/">Ajouter une marque</a>
+    <ul>
+        {% for marque in Marque %}
+            <li>
+                <a href="/vroum/marque/update/{{marque.id}}/"><button>Modifier</button></a>
+
+                <a href="/vroum/marque/delete/{{marque.id}}/" onclick="return confirm('Supprimer cette marque ?')">
+                    <button style="color: red;">Supprimer</button>
+                </a>
+
+                {{marque}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

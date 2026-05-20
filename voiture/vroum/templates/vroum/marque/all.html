@@ -6,13 +6,13 @@
 </head>
 <body>
     <h1>Liste des marques</h1>
-    <a href="/vroum/ajout/">Ajouter une marque</a>
+    <a href="/vroum/marque/ajout/">Ajouter une marque</a>
     <ul>
         {% for marque in Marque %}
             <li>
-                <a href="/vroum/update/{{marque.id}}/"><button>Modifier</button></a>
+                <a href="/vroum/marque/update/{{marque.id}}/"><button>Modifier</button></a>
 
-                <a href="/vroum/delete/{{marque.id}}/" onclick="return confirm('Supprimer cette marque ?')">
+                <a href="/vroum/marque/delete/{{marque.id}}/" onclick="return confirm('Supprimer cette marque ?')">
                     <button style="color: red;">Supprimer</button>
                 </a>
 
