@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'vroum/style.css' %}">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -11,6 +13,6 @@
         <input type="submit" value="envoyer les données"\>
     </form>
     <br>
-    <a href="/vroum/modele/"><button type="button">Retour à la liste</button></a>
+    <a href="/vroum/"><button type="button">Retour à la liste</button></a>
 </body>
 </html>
