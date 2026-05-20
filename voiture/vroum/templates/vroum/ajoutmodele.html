@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action="/vroum/traitementmodele/">
+        {% csrf_token %}
+        {{ form.as_ul }} <!-- permet d'afficher tous les champs sous forme d'une liste-->
+        <input type="submit" value="envoyer les données"\>
+    </form>
+    <br>
+    <a href="/vroum/2"><button type="button">Retour à la liste</button></a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>modele</title>
+</head>
+<body>
+    <h1>Liste des modele</h1>
+    <a href="/vroum/ajoutmodele/">Ajouter un modele</a>
+    <ul>
+        {% for modele in Modele %}
+            <li>
+                <a href="/vroum/updatemodele/{{modele.id}}/"><button>Modifier</button></a>
+
+                <a href="/vroum/deletemodele/{{modele.id}}/" onclick="return confirm('Supprimer ce modele ?')">
+                    <button style="color: red;">Supprimer</button>
+                </a>
+
+                {{modele}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
